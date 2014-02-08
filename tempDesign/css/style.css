@@ -1,0 +1,33 @@
+body {
+	background-image: url("http://www.dahl.com/wp-content/uploads/2013/04/TheOpenRoad.jpg");
+	background-attachment: fixed;
+    font-family: sans-serif;
+    background-size: 100%;
+}
+
+#container {			    
+    margin: 90px auto 0;
+}
+#tiles {	
+	margin: 0 auto;
+}
+@media screen and (min-device-width: 1700px) and (max-device-width: 1950px){
+    #tiles {
+		width: 70%;		
+	}
+   }
+@media screen and (min-device-width: 1300px) and (max-device-width: 1700px){
+    #tiles {
+		width: 65%;		
+	}
+   }
+@media screen  and (max-device-width: 1300px){
+    #tiles {
+		width: 80%;		
+	}
+   }
+
+
+.item { 
+	margin-bottom: 10px;
+}
