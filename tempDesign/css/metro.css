@@ -11,10 +11,10 @@
   padding: 0px;
   width: 200px;
 }
-.live-tile.w2 {
+.live-tile.w-2 {
   width: 415px;
 }
-.live-tile.h2 { 
+.live-tile.h-2 {
   height: 410px; 
 }
 
@@ -584,7 +584,7 @@
 .list-tile a:visited,
 .copy-tile a:visited {
   color: #fff;
-  text-decoration: underline;
+  text-decoration: none;
 }
 .live-tile a:hover,
 .list-tile a:hover,

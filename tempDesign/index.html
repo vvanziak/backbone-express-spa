@@ -1,28 +1,51 @@
 <html>
     <head>
+        <link rel="stylesheet" href="css/bootstrap.css" />
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/metro.css" />
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
         <script src="js/masonry.js"></script> 
         <script src="js/metro.js"></script> 
         <script>
-           $( function() { 
-		    $('#container').masonry({
-		        itemSelector: '.item',
-		        columnWidth: 200,
-		        gutter: 15,
-		        "isFitWidth": true
-		    });
-		    $(".live-tile").liveTile({
+            $( function() {
+                $('#tiles-container').masonry({
+                    itemSelector: '.item',
+                    columnWidth: 200,
+                    gutter: 15,
+                    isFitWidth: true
+                });
+                $(".live-tile").liveTile({});
+                $('.oils').on({
+                    mouseenter: function () {
+                        $('.sub-tile').addClass('rightRotate').removeClass('leftRotate');
+                    },
+                    mouseleave: function () {
+                        $('.sub-tile').addClass('leftRotate').removeClass('rightRotate');
+                    }
+                });
 
-		    });
+
 		});
         </script>         
     </head>
     <body>
-    	<div id="tiles">      
-	        <div id="container"> 	        	
-				<div class="item live-tile steel" data-mode="flip" data-initdelay="500">
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="nav-container">
+                    <div class="navbar-header">
+                        <a href="#" class="navbar-brand">MAXOIL</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li> <a href=" ">Menu item1</a> </li>
+                        <li> <a href=" ">Menu item2</a></li>
+                        <li> <a href=" ">Menu item3</a></li>
+                        <li> <a href=" ">Menu item4</a></li>
+                        <li> <a href=" ">Menu item5</a></li>
+                    </ul>
+            </div>
+        </div>
+    	<div id="main">
+	        <div id="tiles-container">
+				<div class="item live-tile black" data-mode="flip" data-initdelay="100">
 					<div>
 			            <a class="full" href="#">
 			            	<img src="http://www.tutorialswindow.com/thumbnails/Create-Vintage-Car-Grunge-Poster-321.jpg" />
@@ -30,23 +53,64 @@
 			            <span class="tile-title">Title 1</span>
 			        </div>
 			        <div>
-			            <p>this tile flips vertically. Using the 'data-initdelay' ust the time it takes for the inital flip to occur</p>
+                        <a class="full" href="#">
+			                <p>this tile flips vertically. Using the 'data-initdelay' ust the time it takes for the inital flip to occur</p>
+                        </a>
 			        </div>
 			    </div>
 
-				<div class="item live-tile w2 h2 steel" data-mode="flip" data-initdelay="9500">
+				<div class="item live-tile w-2 h-2 black oils"  data-stops="0, 100%" data-repeat="0" data-start-now="false"
+                     data-play-onhover="true" data-use-translate="false">
 					<div>
 			            <a class="full" href="#">
-			            	<img src="http://www.albummusic.net/pictures/3597.gif" />
+			            	<img width="416" src="http://image.shutterstock.com/display_pic_with_logo/1336480/129596375/stock-vector-vector-gas-and-oil-station-retro-label-set-old-gasoline-label-collection-gasoline-label-vector-129596375.jpg" />
 			            </a>
 			            <span class="tile-title">Title 4</span>
 			        </div>
 			        <div>
-			            <p>this tile flips vertically. Using the 'data-initdelay' ust the time it takes for the inital flip to occur</p>
+                        <div id="pitchdeck-controls">
+                            <div class="sub-tile-container">
+                                <a href="">
+                                    <div class="sub-tile" id="tile1">
+                                        <p class="tile-meta">
+                                            Subcategory 1
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <div class="sub-tile" id="tile2">
+                                        <p class="tile-meta">
+                                            Subcategory 2
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <div class="sub-tile" id="tile3">
+                                        <p class="tile-meta">
+                                            Subcategory 3
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <div class="sub-tile" id="tile4">
+                                        <p class="tile-meta">
+                                            Subcategory 4
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <div class="sub-tile" id="tile5">
+                                        <p class="tile-meta">
+                                            Subcategory 5
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
 			        </div>
 				</div>	
 
-				<div class="item live-tile h2 steel" data-mode="flip" data-initdelay="7000">
+				<div class="item live-tile h-2 black"  data-mode="slide" data-stops="30%" data-speed="1100" data-initdelay="7000">
 					<div>
 			            <a class="full" href="#">
 			            	<img src="http://www.charlesapple.com/uploads/2011/04/110418TornadoesKailuaHawaii-200x410.jpg" />
@@ -54,23 +118,27 @@
 			            <span class="tile-title">Title 4</span>
 			        </div>
 			        <div>
-			            <p>this tile flips vertically. Using the 'data-initdelay' ust the time it takes for the inital flip to occur</p>
+                        <a class="full" href="#">
+			                <p>this tile flips vertically. Using the 'data-initdelay' ust the time it takes for the inital flip to occur</p>
+                        </a>
 			        </div>
 			    </div>
 
-				<div class="item live-tile steel" data-mode="flip" data-initdelay="1530">
+				<div class="item live-tile black" data-direction="horizontal" data-mode="flip" data-initdelay="8530">
 					<div>
 			            <a class="full" href="#">
-			            	<img src="http://www.tutorialswindow.com/thumbnails/Create-Vintage-Car-Grunge-Poster-321.jpg" />
+			            	<img src="http://images.all-free-download.com/images/graphicmedium/free_grunge_car_vector_graphic_147437.jpg" />
 			            </a>
 			            <span class="tile-title">Title 4</span>
 			        </div>
 			        <div>
-			            <p>this tile flips vertically. Using the 'data-initdelay' ust the time it takes for the inital flip to occur</p>
+                        <a class="full" href="#">
+			                <p>this tile flips vertically. Using the 'data-initdelay' ust the time it takes for the inital flip to occur</p>
+                        </a>
 			        </div>
 			    </div>	
 
-				<div class="item live-tile steel" data-mode="flip" data-initdelay="5000">
+				<div class="item live-tile black" data-mode="flip" data-initdelay="5000">
 					<div>
 			            <a class="full" href="#">
 			            	<img src="http://www.pxleyes.com/images/tutorials/ext//4ae9d060c9431.jpg" />
@@ -78,11 +146,13 @@
 			            <span class="tile-title">Title 5</span>
 			        </div>
 			        <div>
-			            <p>this tile flips vertically. Using the 'data-initdelay' ust the time it takes for the inital flip to occur</p>
+                        <a class="full" href="#">
+			                <p>this tile flips vertically. Using the 'data-initdelay' ust the time it takes for the inital flip to occur</p>
+                        </a>
 			        </div>
 				</div>
 
-				<div class="item live-tile steel" data-mode="flip" data-initdelay="8000">
+				<div class="item live-tile black" data-mode="flip" data-initdelay="12000">
 					<div>
 			            <a class="full" href="#">
 			            	<img src="http://images.all-free-download.com/images/graphicmedium/grunge_doodles_background_58299.jpg" />
@@ -90,10 +160,12 @@
 			            <span class="tile-title">Title 6</span>
 			        </div>
 			        <div>
-			            <p>this tile flips vertically. Using the 'data-initdelay' ust the time it takes for the inital flip to occur</p>
+                        <a class="full" href="#">
+			                <p>this tile flips vertically. Using the 'data-initdelay' ust the time it takes for the inital flip to occur</p>
+                        </a>
 			        </div>
 			    </div>
-				<div class="item  live-tile w2 steel" data-mode="flip" data-initdelay="9030">
+				<div class="item  live-tile w-2 black" data-direction="horizontal" data-mode="flip" data-initdelay="9030">
 					<div>
 			            <a class="full" href="#">
 			            	<img src="http://media3.giphy.com/media/P16da2BUzM7ks/200_s.gif" />
@@ -101,7 +173,9 @@
 			            <span class="tile-title">Title 6</span>
 			        </div>
 			        <div>
-			            <p>this tile flips vertically. Using the 'data-initdelay' ust the time it takes for the inital flip to occur</p>
+                        <a class="full" href="#">
+			                <p>this tile flips vertically. Using the 'data-initdelay' ust the time it takes for the inital flip to occur</p>
+                        </a>
 			        </div>
 				</div>							  
 			</div>			

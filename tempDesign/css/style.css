@@ -1,33 +1,131 @@
 body {
-	background-image: url("http://www.dahl.com/wp-content/uploads/2013/04/TheOpenRoad.jpg");
+	background-image: url("http://www.unsigneddesign.com/Essential%20Grunge/grunge14.jpg");
 	background-attachment: fixed;
     font-family: sans-serif;
     background-size: 100%;
 }
+.nav-container{
+    float: none;
+    display: block;
+    margin: 0 auto;
+}
 
-#container {			    
+#tiles-container {
     margin: 90px auto 0;
 }
-#tiles {	
+#main {
 	margin: 0 auto;
 }
 @media screen and (min-device-width: 1700px) and (max-device-width: 1950px){
-    #tiles {
+    #main {
 		width: 70%;		
 	}
-   }
+    .nav-container{
+        width: 70%;
+    }
+}
 @media screen and (min-device-width: 1300px) and (max-device-width: 1700px){
-    #tiles {
+    #main {
 		width: 65%;		
 	}
-   }
+    .nav-container{
+        width: 65%;
+    }
+}
 @media screen  and (max-device-width: 1300px){
-    #tiles {
+    #main {
 		width: 80%;		
 	}
-   }
-
-
+    .nav-container{
+        width: 80%;
+    }
+}
 .item { 
 	margin-bottom: 10px;
 }
+
+.sub-tile-container {
+    margin-left: 7px;
+}
+
+#pitchdeck-controls {
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transform: translate(0,0);
+    -moz-transition-timing-function: ease-in-out;
+}
+
+#tiles {
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-perspective: 800px;
+    -moz-transform: translate(0,0);
+    -moz-perspective: 800px;
+    -webkit-transition: 300ms;
+}
+
+.leftRotate{
+    -webkit-transform: translate3d(0,0,0) rotateY(-90deg);
+    opacity:0;
+}
+
+.rightRotate{
+    -webkit-transformation:translate3d(0,0,0) rotateY(0deg);
+    opacity:1;
+}
+
+p.tile-meta {
+    position: absolute;
+    left: 8px;
+    bottom: 5px;
+    margin: 0;
+    padding: 0;
+}
+
+.sub-tile {
+    background-image: url("../images/sub-tile-bg.png");
+    color:  #000;
+    height: 72px;
+    width: 386px;
+    margin: 7px ;
+    position: relative;
+}
+
+.sub-tile:hover {
+    transform:scale(1.03);
+    -ms-transform:scale(1.03); /* IE 9 */
+    -moz-transform:scale(1.03); /* Firefox */
+    -webkit-transform:scale(1.03); /* Safari and Chrome */
+    -o-transform:scale(1.03); /* Opera */
+}
+
+.item:hover {
+    transform:scale(1.03);
+    -ms-transform:scale(1.03); /* IE 9 */
+    -moz-transform:scale(1.03); /* Firefox */
+    -webkit-transform:scale(1.03); /* Safari and Chrome */
+    -o-transform:scale(1.03); /* Opera */
+}
+
+#tile1 {
+    -webkit-transform-origin-x: -8px;
+    -webkit-transition: 300ms 0ms;
+}
+#tile2 {
+    -webkit-transform-origin-x: -8px;
+    -webkit-transition: 300ms 80ms;
+}
+#tile3 {
+    -webkit-transform-origin-x: -8px;
+    -webkit-transition: 300ms 160ms;
+}
+#tile4 {
+    -webkit-transform-origin-x: -8px;
+    -webkit-transition: 300ms 240ms;
+}
+#tile5 {
+    -webkit-transform-origin-x: -8px;
+    -webkit-transition: 300ms 320ms;
+}
+
+
+
